@@ -10,6 +10,9 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 
+# training
+from sklearn.tree import DecisionTreeClassifier
+
 train_df = pd.read_csv('datas/train.csv')
 test_df = pd.read_csv('datas/test.csv')
 combine = [train_df, test_df]
@@ -131,10 +134,16 @@ Y_train = train_df["Survived"]
 X_test  = test_df.drop("PassengerId", axis=1).copy()
 X_train.shape, Y_train.shape, X_test.shape
 
-# Logistic Regression
+# Decision Tree
 
-# logreg = LogisticRegression()
-# logreg.fit(X_train, Y_train)
-# Y_pred = logreg.predict(X_test)
-# acc_log = round(logreg.score(X_train, Y_train) * 100, 2)
-# print(acc_log)
+decision_tree = DecisionTreeClassifier()
+decision_tree.fit(X_train, Y_train)
+Y_pred = decision_tree.predict(X_test)
+acc_decision_tree = round(decision_tree.score(X_train, Y_train) * 100, 2)
+
+submission = pd.DataFrame({
+    "PassengerId": test_df["PassengerId"],
+    "Survived": Y_pred
+})
+
+submission.to_csv('output/submission.csv', index=False)
