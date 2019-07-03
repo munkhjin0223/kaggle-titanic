@@ -1,5 +1,5 @@
 # Kaggle competitions I've participated
 
-- Titanic: Machine Learning from Disaster (data)[https://www.kaggle.com/c/titanic/data]
-- Digit recognizer (data)[https://www.kaggle.com/c/digit-recognizer/data]
-- House Prices: Advanced regression techniques (data)[https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data]
+- Titanic: Machine Learning from Disaster [more](https://www.kaggle.com/c/titanic/)
+- Digit recognizer [more](https://www.kaggle.com/c/digit-recognizer)
+- House Prices: Advanced regression techniques [more](https://www.kaggle.com/c/house-prices-advanced-regression-techniques/data)
